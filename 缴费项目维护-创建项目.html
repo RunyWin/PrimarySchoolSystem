@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+		<title>创建项目</title>
+
+        <!--网页自适应屏幕-->
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+
+        <!--引入bootstrap框架-->
+        <link type="text/css" rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.css" />
+        <link type="text/css" rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css" />
+        <script src="js/Jquery-3.6.0/jquery-3.6.0.js"></script>
+        <script src="js/Jquery-3.6.0/jquery-3.6.0.min.js"></script>
+        <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+
+        <!--内联样式-->
+        <style type="text/css">
+             #hover{
+				width: 100%;
+				float: left;
+				margin: 100px 0px 0px 0px;
+				transition: all 0.4s;
+			}
+
+			#hover:hover{
+				box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.4);
+				margin-top: 95px;
+			}
+            table{
+                width: 100%;
+            }
+            table td{
+                padding: 5px 0 5px 0;
+            }
+        </style>
+    </head>
+
+    <body style="background-image: url('img/图片2.png'); background-repeat: no-repeat; background-size: 100%;">
+         
+        <nav class="navbar navbar-default" role="navigation">
+			<div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="缴费项目维护.html">xxx幼儿园缴费系统</a>
+                </div>
+                
+			<!--个人中心-->
+			<div style="float:right;margin:10px 10px 0 0;">
+                <div class="dropdown">
+                    <button type="button" class="btn dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown">
+                        管理员&nbsp;欢迎您！
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                        <li role="presentation">
+                            <a role="menuitem" tabindex="-1" href="个人中心.html">个人信息</a>
+                        </li>
+                        <li role="presentation">
+                            <a role="menuitem" tabindex="-1" href="修改密码.html">修改密码</a>
+                        </li>
+                        <li role="presentation">
+                            <a role="menuitem" tabindex="-1" href="#">注销登录</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+			</div>
+		</nav>
+
+        <!--主体-->
+        <div style="width: 25%; margin: 20px 50px 20px 50px;margin: auto; text-align: center;">
+            <div class="panel panel-default" id="hover">
+				<div class="panel-body">	
+					<div style="width: 100%;">
+						<a href="#" data-toggle="modal" data-target="#myModal">
+                            <img src="img/9-创建.png" style="width: 60%;">
+                        </a>
+					</div>
+					<hr>  
+					<!--标题-->
+					<div style="width: 100%; padding-bottom: 20px;">
+                        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">创建项目</button>
+
+                        <!-- 模态框（Modal） -->
+                        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                            &times;
+                                        </button>
+                                        <h4 class="modal-title" id="myModalLabel">
+                                            项目创建
+                                        </h4>
+                                    </div>
+                                    <div class="modal-body">
+
+                                        <!--信息键入表单-->
+                                        <table>
+                                            <tbody>
+                                                <tr>
+                                                    <th>项目编号</th>
+                                                    <td><input type="text" class="form-control" /></td>
+                                                </tr>
+                                                <tr>
+                                                    <th>项目名称</th>
+                                                    <td><input type="text" class="form-control" /></td>
+                                                </tr>
+                                                <tr>
+                                                    <th>选项类型</th>
+                                                    <td>
+                                                        <select class="form-control">
+                                                            <option>单选</option>
+                                                            <option>多选</option>
+                                                        </select>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>缴费开始时间</th>
+                                                    <td><input type="text" class="form-control" /></td>
+                                                </tr>
+                                                <tr>
+                                                    <th>缴费截止时间</th>
+                                                    <td><input type="text" class="form-control" /></td>
+                                                </tr>
+                                                <tr>
+                                                    <th>收款账户</th>
+                                                    <td><input type="text" class="form-control" /></td>
+                                                </tr>
+                                                <tr>
+                                                    <th>收款说明</th>
+                                                    <td><textarea class="form-control" rows="3"></textarea></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭
+                                        </button>
+                                        <button type="button" class="btn btn-primary">
+                                            提交
+                                        </button>
+                                    </div>
+                                </div><!-- /.modal-content -->
+                            </div><!-- /.modal -->
+                    </div>
+				</div>
+			</div>
+        </div>
+    </body>
+</html>

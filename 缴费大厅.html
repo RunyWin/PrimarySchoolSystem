@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+		<title>缴费大厅</title>
+		<!--网页自适应屏幕-->
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+
+        <!--引入bootstrap框架-->
+        <link type="text/css" rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.css" />
+        <link type="text/css" rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css" />
+        <script src="js/Jquery-3.6.0/jquery-3.6.0.js"></script>
+        <script src="js/Jquery-3.6.0/jquery-3.6.0.min.js"></script>
+        <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+
+
+    </head>
+
+    <body style="background-image: url('img/图片2.png'); background-repeat: no-repeat; background-size: 100%;">
+         <!--头部-->
+        <nav class="navbar navbar-default" role="navigation">
+			<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="index.html">xxx幼儿园缴费系统</a>
+			</div>
+			
+			<!--个人中心-->
+			<div style="float:right;margin:10px 10px 0 0;">
+                <div class="dropdown">
+                    <button type="button" class="btn dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown">
+                        管理员&nbsp;欢迎您！
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                        <li role="presentation">
+                            <a role="menuitem" tabindex="-1" href="个人中心.html">个人信息</a>
+                        </li>
+                        <li role="presentation">
+                            <a role="menuitem" tabindex="-1" href="修改密码.html">修改密码</a>
+                        </li>
+                        <li role="presentation">
+                            <a role="menuitem" tabindex="-1" href="#">注销登录</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+			</div>
+		</nav>
+
+        <!--主体-->
+        <div class="panel panel-default" style="width: 95%; margin: auto;">
+            <div class="panel-body">
+                <!--导航-->
+                <div style="width: 10%; float: left;">
+                    <ul class="nav nav-pills nav-stacked">
+                        <li class="active"><a href="缴费大厅.html">缴费项目</a></li>
+                        <li><a href="缴费大厅-缴费账单.html">缴费账单</a></li>
+                    </ul>
+                </div>
+                
+                <!--右侧内容-->
+                <div style="width: 90%;float: left;">
+                    
+                    <ul id="myTab" class="nav nav-tabs">
+                        <li class="active"><a href="#home" data-toggle="tab">缴费项目</a></li>
+                        
+                        <li><a href="#ios" data-toggle="tab">账单查询</a></li>
+                        
+                    </ul>
+                    
+                    <div id="myTabContent" class="tab-content">
+                        <!--第一个标签页-->
+                        <div class="tab-pane fade in active" id="home">
+                            <!--搜素框-->
+                            <form class="bs-example bs-example-form" role="form" style="float: right; margin-top: 10px;">
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="input-group" style="margin: 2px 10px 2px 10px;">
+                                                    <span class="input-group-addon">项目编号</span>
+                                                    <input type="text" class="form-control" placeholder="请输入项目编号">
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="input-group" style="margin: 2px 20px 2px 10px;">
+                                                    <span class="input-group-addon">项目名称</span>
+                                                    <input type="text" class="form-control" placeholder="请输入项目名称">
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <button style="margin: 2px 50px 2px 0;" type="button" class="btn btn-info">搜索</button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </form>
+                            <br/>
+
+                            <!--表格主体-->
+                            <div class="panel panel-default" style="margin-top: 45px;">
+                                <div class="panel-body">
+                                    <table class="table table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th>项目编号</th>
+                                                <th>项目名称</th>
+                                                <th colspan="2">开放时间</th>
+                                                <th>状态</th>
+                                                <th>缴费</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>10001</td>
+                                                <td>2020-2021学年&nbsp;学费</td>
+                                                <td colspan="2">2020-08-20-00:00——2020-10-20-00:00</td>
+                                                <td>
+                                                    <span class="label label-success" style="padding: 2px 4px 2px 4px;">进行中</span>
+                                                </td>
+                                                <td>
+                                                    <button type="button" class="btn btn-primary" style="padding: 2px 8px 2px 8px; border: 0px;"><a href="缴费大厅-进入缴费.html" style="text-decoration: none;color: white;">进入</a></button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>10001</td>
+                                                <td>2020-2021学年&nbsp;学费</td>
+                                                <td colspan="2">2020-08-20-00:00——2020-10-20-00:00</td>
+                                                <td>
+                                                    <span class="label label-success" style="padding: 2px 4px 2px 4px;">进行中</span>
+                                                </td>
+                                                <td>
+                                                    <button type="button" class="btn btn-primary" style="padding: 2px 8px 2px 8px; border: 0px;"><a href="缴费大厅-进入缴费.html" style="text-decoration: none;color: white;">进入</a></button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>10001</td>
+                                                <td>2020-2021学年&nbsp;学费</td>
+                                                <td colspan="2">2020-08-20-00:00——2020-10-20-00:00</td>
+                                                <td>
+                                                    <span class="label label-default" style="padding: 2px 4px 2px 4px;">已结束</span>
+                                                </td>
+                                                <td>
+                                                    <button type="button" class="btn btn-primary" disabled="disabled" style="padding: 2px 8px 2px 8px; border: 0px;"><a href="缴费大厅-进入缴费.html" style="text-decoration: none;color: white;">进入</a></button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>10001</td>
+                                                <td>2020-2021学年&nbsp;学费</td>
+                                                <td colspan="2">2020-08-20-00:00——2020-10-20-00:00</td>
+                                                <td>
+                                                    <span class="label label-warning" style="padding: 2px 4px 2px 4px;">未开始</span>
+                                                </td>
+                                                <td>
+                                                    <button type="button" class="btn btn-primary" disabled="disabled" style="padding: 2px 8px 2px 8px; border: 0px;"><a href="缴费大厅-进入缴费.html" style="text-decoration: none;color: white;">进入</a></button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>10001</td>
+                                                <td>2020-2021学年&nbsp;学费</td>
+                                                <td colspan="2">2020-08-20-00:00——2020-10-20-00:00</td>
+                                                <td>
+                                                    <span class="label label-default" style="padding: 2px 4px 2px 4px;">已结束</span>
+                                                </td>
+                                                <td>
+                                                    <button type="button" class="btn btn-primary" disabled="disabled" style="padding: 2px 8px 2px 8px; border: 0px;"><a href="缴费大厅-进入缴费.html" style="text-decoration: none;color: white;">进入</a></button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <!--分页-->
+                                    <div style="width: 100%; text-align: center;">
+                                        <ul class="pagination pagination-sm">
+                                            <li><a href="#">&laquo;</a></li>
+                                            <li><a href="#">1</a></li>
+                                            <li><a href="#">2</a></li>
+                                            <li><a href="#">3</a></li>
+                                            <li><a href="#">4</a></li>
+                                            <li><a href="#">5</a></li>
+                                            <li><a href="#">&raquo;</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--第二个标签页-->
+                        <div class="tab-pane fade" id="ios">
+                            <div style="width: 100%; margin: auto;">
+                                <table style="width: 100%; margin-top: 30px;">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="input-group" style="margin: 2px 10px 2px 10px;">
+                                                    <span class="input-group-addon">用户编号</span>
+                                                    <input type="text" class="form-control" placeholder="请输入用户编号">
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="input-group" style="margin: 2px 20px 2px 10px;">
+                                                    <span class="input-group-addon">订单编号</span>
+                                                    <input type="text" class="form-control" placeholder="请输入订单编号">
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <button style="margin: 2px 50px 2px 0;" type="button" class="btn btn-info">搜索</button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <hr/>
+
+                                <!--放一个盒子，查询之后，个人的账单会在这个盒子里面显示-->
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

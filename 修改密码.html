@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+		<title>个人中心</title>
+		<!--网页自适应屏幕-->
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+
+        <!--引入bootstrap框架-->
+        <link type="text/css" rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.css" />
+        <link type="text/css" rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css" />
+        <script src="js/Jquery-3.6.0/jquery-3.6.0.js"></script>
+        <script src="js/Jquery-3.6.0/jquery-3.6.0.min.js"></script>
+        <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+
+    </head>
+
+    <body style="background-image: url('img/图片2.png'); background-repeat: no-repeat; background-size: 100%;">
+         <!--头部-->
+         <nav class="navbar navbar-default" role="navigation">
+			<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="index.html">xxx幼儿园缴费系统</a>
+			</div>
+			
+			<!--个人中心-->
+			<div style="float:right;margin:10px 10px 0 0;">
+                <div class="dropdown">
+                    <button type="button" class="btn dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown">
+                        管理员&nbsp;欢迎您！
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                        <li role="presentation">
+                            <a role="menuitem" tabindex="-1" href="个人中心.html">个人信息</a>
+                        </li>
+                        <li role="presentation">
+                            <a role="menuitem" tabindex="-1" href="修改密码.html">修改密码</a>
+                        </li>
+                        <li role="presentation">
+                            <a role="menuitem" tabindex="-1" href="#">注销登录</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+			</div>
+		</nav>
+
+        <!--主体-->
+        <div class="panel panel-default" style="width: 45%; margin: auto;">
+            <div class="panel-body">
+                <div style="text-align: center;"><h3>修改密码</h3></div>
+                <hr/>
+
+                <!--表单-->
+                <div style="width: 60%; margin: auto;">
+                    <form role="form">
+                        <table style="width: 100%;">
+                            <tbody>
+                                <tr>
+                                    <th>旧密码：</th>
+                                    <td>
+                                        <input type="text" class="form-control" id="name" style="margin: 10px 0px 10px 0px;">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>新密码：</th>
+                                    <td>
+                                        <input type="text" class="form-control" id="name" style="margin: 10px 0px 10px 0px;">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>确认密码：</th>
+                                    <td>
+                                        <input type="text" class="form-control" id="name" style="margin: 10px 0px 10px 0px;">
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </form>
+                    <div style="float: right; margin: 8px 0px 5px 0px;"><a href="个人中心.html">个人中心</a></div>
+                    <br/>
+                    <hr/>
+                    <!--确认修改按钮-->
+                    <div style="width: 100%; text-align: center;">
+                        <button type="button" class="btn btn-success" style="padding: 6px 50px 6px 50px; border: 0px;">确认修改</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

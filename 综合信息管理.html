@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+		<title>综合信息管理</title>
+		<!--网页自适应屏幕-->
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+
+        <!--引入bootstrap框架-->
+        <link type="text/css" rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.css" />
+        <link type="text/css" rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css" />
+        <script src="js/Jquery-3.6.0/jquery-3.6.0.js"></script>
+        <script src="js/Jquery-3.6.0/jquery-3.6.0.min.js"></script>
+        <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+
+        
+    </head>
+
+    <body style="background-image: url('img/图片2.png'); background-repeat: no-repeat; background-size: 100%;">
+         <!--头部-->
+        <nav class="navbar navbar-default" role="navigation">
+			<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="index.html">xxx幼儿园缴费系统</a>
+			</div>
+			
+			<!--个人中心-->
+			<div style="float:right;margin:10px 10px 0 0;">
+                <div class="dropdown">
+                    <button type="button" class="btn dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown">
+                        管理员&nbsp;欢迎您！
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                        <li role="presentation">
+                            <a role="menuitem" tabindex="-1" href="个人中心.html">个人信息</a>
+                        </li>
+                        <li role="presentation">
+                            <a role="menuitem" tabindex="-1" href="修改密码.html">修改密码</a>
+                        </li>
+                        <li role="presentation">
+                            <a role="menuitem" tabindex="-1" href="#">注销登录</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+			</div>
+		</nav>
+
+        <!--主体-->
+        <div class="panel panel-default" style="width: 95%; margin: auto;">
+            <div class="panel-body">
+                    <!--垂直的导航栏-->
+                <div style="width: 10%; float: left;">
+                    <ul class="nav nav-pills nav-stacked">
+                        <li class="active"><a href="综合信息管理.html">用户管理</a></li>
+                        <li><a href="综合信息管理-收款管理.html">收款管理</a></li>
+                        <li><a href="综合信息管理-系统-管理员.html">系统管理</a></li>
+                    </ul>
+                </div>
+                <!--内容面板-->
+                <div class="panel panel-default" style="width: 88%; float: left; margin-left: 15px;">
+                    <div class="panel-body">
+                        
+                        <!--标签页-->
+                        <ul id="myTab" class="nav nav-tabs">
+                            <li class="active"><a href="#message" data-toggle="tab">信息录入</a></li>
+                            <li><a href="#ment" data-toggle="tab">信息管理</a></li>
+                        </ul>
+                        <!--隐藏容器-->
+                        <div id="myTabContent" class="tab-content">
+                            <div class="tab-pane fade in active" id="message">
+                                <div style="text-align: center;"><h4>个人信息录入</h4></div>
+                                <!--表单-->
+                                <div class="panel panel-default" style="text-align: center;">
+                                    <div class="panel-body">
+                                        <!--表单盒子容器-->
+                                        <div style="width: 60%; margin: auto;">
+                                            <form class="form-horizontal" role="form">
+                                                <table style="width: 100%;">
+                                                    <tbody>
+                                                        <tr>
+                                                            <th style="padding: 15px 0px 15px 0px;">用户名：</th>
+                                                            <td>
+                                                                <input type="text" class="form-control" id="firstname" placeholder="请输入名字">
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th style="padding: 15px 0px 15px 0px;">性别：</th>
+                                                            <td>
+                                                                <input type="text" class="form-control" id="firstname">
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th style="padding: 15px 0px 15px 0px;">年龄：</th>
+                                                            <td>
+                                                                <input type="text" class="form-control" id="firstname">
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th style="padding: 15px 0px 15px 0px;">籍贯：</th>
+                                                            <td>
+                                                                <input type="text" class="form-control" id="firstname">
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th style="padding: 15px 0px 15px 0px;">联系电话：</th>
+                                                            <td>
+                                                                <input type="text" class="form-control" id="firstname">
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th style="padding: 15px 0px 15px 0px;">微信：</th>
+                                                            <td>
+                                                                <input type="text" class="form-control" id="firstname" placeholder="">
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th style="padding: 15px 0px 15px 0px;">设置密码：</th>
+                                                            <td>
+                                                                <input type="text" class="form-control" id="firstname" placeholder="">
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th style="padding: 15px 0px 15px 0px;">确认密码：</th>
+                                                            <td>
+                                                                <input type="text" class="form-control" id="firstname" placeholder="">
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th style="padding: 15px 0px 15px 0px;">绑定手机：</th>
+                                                            <td>
+                                                                <div class="input-group" style="width: 60%;">
+                                                                    <input type="text" class="form-control">
+                                                                    <span class="input-group-btn">
+                                                                        <button class="btn btn-default" type="button">
+                                                                            获取验证码
+                                                                        </button>
+                                                                    </span>
+                                                                </div><!-- /input-group -->
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th style="padding: 15px 0px 15px 0px;">验证码：</th>
+                                                            <td>
+                                                                <input type="text" class="form-control" id="firstname" style="width: 40%;">
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <hr/>
+                                            </form>
+                                            <!--录入按钮-->
+                                            <div style="margin: auto; width: 20%;">
+                                                <button type="button" class="btn btn-success" style="border: 0px; width: 100%;">提交录入</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!--用户信息管理-->
+                            <div class="tab-pane fade" id="ment">
+                                <!--查询容器-->
+                                <form class="bs-example bs-example-form" role="form" style="float: right; margin-top: 20px;">
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <div class="input-group" style="margin: 2px 10px 2px 10px;">
+                                                        <span class="input-group-addon">用户编号</span>
+                                                        <input type="text" class="form-control" placeholder="请输入用户编号">
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="input-group" style="margin: 2px 20px 2px 10px;">
+                                                        <span class="input-group-addon">用户名</span>
+                                                        <input type="text" class="form-control" placeholder="请输入用户名">
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <button style="margin: 2px 50px 2px 0;" type="button" class="btn btn-info">搜索</button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </form>
+                                <br/>
+
+                                <div class="panel panel-default" style="margin-top: 55px;">
+                                    <div class="panel-body">
+                                        <table class="table table-hover">
+                                            <thead>
+                                                <tr>
+                                                    <th>用户编号</th>
+                                                    <th>用户名</th>
+                                                    <th>性别</th>
+                                                    <th>籍贯</th>
+                                                    <th>联系电话</th>
+                                                    <th>微信</th>
+                                                    <th colspan="2">操作</th>
+                                                    <th></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>132254556</td>
+                                                    <td>张三</td>
+                                                    <td>男</td>
+                                                    <td>云南-昆明</td>
+                                                    <td>13666521478</td>
+                                                    <td>13666521478</td>
+                                                    <td>
+                                                        <!--模态框触发按钮-->
+                                                        <button data-toggle="modal" data-target="#myModal" type="button" class="btn btn-warning" style="padding: 2px 4px 2px 4px; border: 0px;">
+                                                            修改
+                                                        </button>
+
+                                                        <!--模态框-->
+                                                        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                                            <div class="modal-dialog">
+                                                                <div class="modal-content">
+                                                                    <div class="modal-header">
+                                                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                                                            &times;
+                                                                        </button>
+                                                                        <h4 class="modal-title" id="myModalLabel">
+                                                                            信息修改
+                                                                        </h4>
+                                                                    </div>
+                                                                    <div class="modal-body">
+                                                                        <table style="width: 100%;">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        <div class="input-group" style="margin: 4px;">
+                                                                                            <span class="input-group-addon">用户编号</span>
+                                                                                            <input type="text" class="form-control" placeholder="12346213">
+                                                                                        </div>
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        <div class="input-group">
+                                                                                            <span class="input-group-addon">用户名</span>
+                                                                                            <input type="text" class="form-control" placeholder="张三">
+                                                                                        </div>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        <div class="input-group" style="margin: 4px;">
+                                                                                            <span class="input-group-addon">性别</span>
+                                                                                            <input type="text" class="form-control" placeholder="男">
+                                                                                        </div>
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        <div class="input-group">
+                                                                                            <span class="input-group-addon">年龄</span>
+                                                                                            <input type="text" class="form-control" placeholder="45">
+                                                                                        </div>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        <div class="input-group" style="margin: 4px;">
+                                                                                            <span class="input-group-addon">籍贯</span>
+                                                                                            <input type="text" class="form-control" placeholder="云南-昆明">
+                                                                                        </div>
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        <div class="input-group">
+                                                                                            <span class="input-group-addon">联系电话</span>
+                                                                                            <input type="text" class="form-control" placeholder="13363521478">
+                                                                                        </div>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        <div class="input-group" style="margin: 4px;">
+                                                                                            <span class="input-group-addon">微信</span>
+                                                                                            <input type="text" class="form-control" placeholder="13336521478">
+                                                                                        </div>
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        <div class="input-group">
+                                                                                            <span class="input-group-addon">密码</span>
+                                                                                            <input type="text" class="form-control" placeholder="123456789">
+                                                                                        </div>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        <div class="input-group" style="margin: 4px;">
+                                                                                            <span class="input-group-addon">绑定手机</span>
+                                                                                            <input type="text" class="form-control" placeholder="13336521478">
+                                                                                        </div>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </div>
+                                                                    <div class="modal-footer">
+                                                                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭
+                                                                        </button>
+                                                                        <button type="button" class="btn btn-primary">
+                                                                            提交更改
+                                                                        </button>
+                                                                    </div>
+                                                                </div><!-- /.modal-content -->
+                                                            </div><!-- /.modal -->
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <button type="button" class="btn btn-danger" style="padding: 2px 4px 2px 4px; border: 0px;">删除</button>
+                                                    </td>
+                                                    <td><a href="综合信息管理-账单查询.html" target="_blank">账单查询</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>132254556</td>
+                                                    <td>张三</td>
+                                                    <td>男</td>
+                                                    <td>云南-昆明</td>
+                                                    <td>13666521478</td>
+                                                    <td>13666521478</td>
+                                                    <td>
+                                                        <!--模态框触发按钮-->
+                                                        <button data-toggle="modal" data-target="#myModal" type="button" class="btn btn-warning" style="padding: 2px 4px 2px 4px; border: 0px;">
+                                                            修改
+                                                        </button>
+
+                                                        <!--模态框-->
+                                                        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                                            <div class="modal-dialog">
+                                                                <div class="modal-content">
+                                                                    <div class="modal-header">
+                                                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                                                            &times;
+                                                                        </button>
+                                                                        <h4 class="modal-title" id="myModalLabel">
+                                                                            信息修改
+                                                                        </h4>
+                                                                    </div>
+                                                                    <div class="modal-body">
+                                                                        <table style="width: 100%;">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        <div class="input-group" style="margin: 4px;">
+                                                                                            <span class="input-group-addon">用户编号</span>
+                                                                                            <input type="text" class="form-control" placeholder="12346213">
+                                                                                        </div>
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        <div class="input-group">
+                                                                                            <span class="input-group-addon">用户名</span>
+                                                                                            <input type="text" class="form-control" placeholder="张三">
+                                                                                        </div>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        <div class="input-group" style="margin: 4px;">
+                                                                                            <span class="input-group-addon">性别</span>
+                                                                                            <input type="text" class="form-control" placeholder="男">
+                                                                                        </div>
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        <div class="input-group">
+                                                                                            <span class="input-group-addon">年龄</span>
+                                                                                            <input type="text" class="form-control" placeholder="45">
+                                                                                        </div>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        <div class="input-group" style="margin: 4px;">
+                                                                                            <span class="input-group-addon">籍贯</span>
+                                                                                            <input type="text" class="form-control" placeholder="云南-昆明">
+                                                                                        </div>
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        <div class="input-group">
+                                                                                            <span class="input-group-addon">联系电话</span>
+                                                                                            <input type="text" class="form-control" placeholder="13363521478">
+                                                                                        </div>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        <div class="input-group" style="margin: 4px;">
+                                                                                            <span class="input-group-addon">微信</span>
+                                                                                            <input type="text" class="form-control" placeholder="13336521478">
+                                                                                        </div>
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        <div class="input-group">
+                                                                                            <span class="input-group-addon">密码</span>
+                                                                                            <input type="text" class="form-control" placeholder="123456789">
+                                                                                        </div>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        <div class="input-group" style="margin: 4px;">
+                                                                                            <span class="input-group-addon">绑定手机</span>
+                                                                                            <input type="text" class="form-control" placeholder="13336521478">
+                                                                                        </div>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </div>
+                                                                    <div class="modal-footer">
+                                                                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭
+                                                                        </button>
+                                                                        <button type="button" class="btn btn-primary">
+                                                                            提交更改
+                                                                        </button>
+                                                                    </div>
+                                                                </div><!-- /.modal-content -->
+                                                            </div><!-- /.modal -->
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <button type="button" class="btn btn-danger" style="padding: 2px 4px 2px 4px; border: 0px;">删除</button>
+                                                    </td>
+                                                    <td><a href="综合信息管理-账单查询.html" target="_blank">账单查询</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>132254556</td>
+                                                    <td>张三</td>
+                                                    <td>男</td>
+                                                    <td>云南-昆明</td>
+                                                    <td>13666521478</td>
+                                                    <td>13666521478</td>
+                                                    <td>
+                                                        <!--模态框触发按钮-->
+                                                        <button data-toggle="modal" data-target="#myModal" type="button" class="btn btn-warning" style="padding: 2px 4px 2px 4px; border: 0px;">
+                                                            修改
+                                                        </button>
+
+                                                        <!--模态框-->
+                                                        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                                            <div class="modal-dialog">
+                                                                <div class="modal-content">
+                                                                    <div class="modal-header">
+                                                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                                                            &times;
+                                                                        </button>
+                                                                        <h4 class="modal-title" id="myModalLabel">
+                                                                            信息修改
+                                                                        </h4>
+                                                                    </div>
+                                                                    <div class="modal-body">
+                                                                        <table style="width: 100%;">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        <div class="input-group" style="margin: 4px;">
+                                                                                            <span class="input-group-addon">用户编号</span>
+                                                                                            <input type="text" class="form-control" placeholder="12346213">
+                                                                                        </div>
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        <div class="input-group">
+                                                                                            <span class="input-group-addon">用户名</span>
+                                                                                            <input type="text" class="form-control" placeholder="张三">
+                                                                                        </div>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        <div class="input-group" style="margin: 4px;">
+                                                                                            <span class="input-group-addon">性别</span>
+                                                                                            <input type="text" class="form-control" placeholder="男">
+                                                                                        </div>
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        <div class="input-group">
+                                                                                            <span class="input-group-addon">年龄</span>
+                                                                                            <input type="text" class="form-control" placeholder="45">
+                                                                                        </div>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        <div class="input-group" style="margin: 4px;">
+                                                                                            <span class="input-group-addon">籍贯</span>
+                                                                                            <input type="text" class="form-control" placeholder="云南-昆明">
+                                                                                        </div>
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        <div class="input-group">
+                                                                                            <span class="input-group-addon">联系电话</span>
+                                                                                            <input type="text" class="form-control" placeholder="13363521478">
+                                                                                        </div>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        <div class="input-group" style="margin: 4px;">
+                                                                                            <span class="input-group-addon">微信</span>
+                                                                                            <input type="text" class="form-control" placeholder="13336521478">
+                                                                                        </div>
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        <div class="input-group">
+                                                                                            <span class="input-group-addon">密码</span>
+                                                                                            <input type="text" class="form-control" placeholder="123456789">
+                                                                                        </div>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        <div class="input-group" style="margin: 4px;">
+                                                                                            <span class="input-group-addon">绑定手机</span>
+                                                                                            <input type="text" class="form-control" placeholder="13336521478">
+                                                                                        </div>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </div>
+                                                                    <div class="modal-footer">
+                                                                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭
+                                                                        </button>
+                                                                        <button type="button" class="btn btn-primary">
+                                                                            提交更改
+                                                                        </button>
+                                                                    </div>
+                                                                </div><!-- /.modal-content -->
+                                                            </div><!-- /.modal -->
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <button type="button" class="btn btn-danger" style="padding: 2px 4px 2px 4px; border: 0px;">删除</button>
+                                                    </td>
+                                                    <td><a href="综合信息管理-账单查询.html" target="_blank">账单查询</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>132254556</td>
+                                                    <td>张三</td>
+                                                    <td>男</td>
+                                                    <td>云南-昆明</td>
+                                                    <td>13666521478</td>
+                                                    <td>13666521478</td>
+                                                    <td>
+                                                        <!--模态框触发按钮-->
+                                                        <button data-toggle="modal" data-target="#myModal" type="button" class="btn btn-warning" style="padding: 2px 4px 2px 4px; border: 0px;">
+                                                            修改
+                                                        </button>
+
+                                                        <!--模态框-->
+                                                        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                                            <div class="modal-dialog">
+                                                                <div class="modal-content">
+                                                                    <div class="modal-header">
+                                                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                                                            &times;
+                                                                        </button>
+                                                                        <h4 class="modal-title" id="myModalLabel">
+                                                                            信息修改
+                                                                        </h4>
+                                                                    </div>
+                                                                    <div class="modal-body">
+                                                                        <table style="width: 100%;">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        <div class="input-group" style="margin: 4px;">
+                                                                                            <span class="input-group-addon">用户编号</span>
+                                                                                            <input type="text" class="form-control" placeholder="12346213">
+                                                                                        </div>
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        <div class="input-group">
+                                                                                            <span class="input-group-addon">用户名</span>
+                                                                                            <input type="text" class="form-control" placeholder="张三">
+                                                                                        </div>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        <div class="input-group" style="margin: 4px;">
+                                                                                            <span class="input-group-addon">性别</span>
+                                                                                            <input type="text" class="form-control" placeholder="男">
+                                                                                        </div>
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        <div class="input-group">
+                                                                                            <span class="input-group-addon">年龄</span>
+                                                                                            <input type="text" class="form-control" placeholder="45">
+                                                                                        </div>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        <div class="input-group" style="margin: 4px;">
+                                                                                            <span class="input-group-addon">籍贯</span>
+                                                                                            <input type="text" class="form-control" placeholder="云南-昆明">
+                                                                                        </div>
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        <div class="input-group">
+                                                                                            <span class="input-group-addon">联系电话</span>
+                                                                                            <input type="text" class="form-control" placeholder="13363521478">
+                                                                                        </div>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        <div class="input-group" style="margin: 4px;">
+                                                                                            <span class="input-group-addon">微信</span>
+                                                                                            <input type="text" class="form-control" placeholder="13336521478">
+                                                                                        </div>
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        <div class="input-group">
+                                                                                            <span class="input-group-addon">密码</span>
+                                                                                            <input type="text" class="form-control" placeholder="123456789">
+                                                                                        </div>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        <div class="input-group" style="margin: 4px;">
+                                                                                            <span class="input-group-addon">绑定手机</span>
+                                                                                            <input type="text" class="form-control" placeholder="13336521478">
+                                                                                        </div>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </div>
+                                                                    <div class="modal-footer">
+                                                                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭
+                                                                        </button>
+                                                                        <button type="button" class="btn btn-primary">
+                                                                            提交更改
+                                                                        </button>
+                                                                    </div>
+                                                                </div><!-- /.modal-content -->
+                                                            </div><!-- /.modal -->
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <button type="button" class="btn btn-danger" style="padding: 2px 4px 2px 4px; border: 0px;">删除</button>
+                                                    </td>
+                                                    <td><a href="综合信息管理-账单查询.html" target="_blank">账单查询</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>132254556</td>
+                                                    <td>张三</td>
+                                                    <td>男</td>
+                                                    <td>云南-昆明</td>
+                                                    <td>13666521478</td>
+                                                    <td>13666521478</td>
+                                                    <td>
+                                                        <!--模态框触发按钮-->
+                                                        <button data-toggle="modal" data-target="#myModal" type="button" class="btn btn-warning" style="padding: 2px 4px 2px 4px; border: 0px;">
+                                                            修改
+                                                        </button>
+
+                                                        <!--模态框-->
+                                                        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                                            <div class="modal-dialog">
+                                                                <div class="modal-content">
+                                                                    <div class="modal-header">
+                                                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                                                            &times;
+                                                                        </button>
+                                                                        <h4 class="modal-title" id="myModalLabel">
+                                                                            信息修改
+                                                                        </h4>
+                                                                    </div>
+                                                                    <div class="modal-body">
+                                                                        <table style="width: 100%;">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        <div class="input-group" style="margin: 4px;">
+                                                                                            <span class="input-group-addon">用户编号</span>
+                                                                                            <input type="text" class="form-control" placeholder="12346213">
+                                                                                        </div>
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        <div class="input-group">
+                                                                                            <span class="input-group-addon">用户名</span>
+                                                                                            <input type="text" class="form-control" placeholder="张三">
+                                                                                        </div>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        <div class="input-group" style="margin: 4px;">
+                                                                                            <span class="input-group-addon">性别</span>
+                                                                                            <input type="text" class="form-control" placeholder="男">
+                                                                                        </div>
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        <div class="input-group">
+                                                                                            <span class="input-group-addon">年龄</span>
+                                                                                            <input type="text" class="form-control" placeholder="45">
+                                                                                        </div>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        <div class="input-group" style="margin: 4px;">
+                                                                                            <span class="input-group-addon">籍贯</span>
+                                                                                            <input type="text" class="form-control" placeholder="云南-昆明">
+                                                                                        </div>
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        <div class="input-group">
+                                                                                            <span class="input-group-addon">联系电话</span>
+                                                                                            <input type="text" class="form-control" placeholder="13363521478">
+                                                                                        </div>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        <div class="input-group" style="margin: 4px;">
+                                                                                            <span class="input-group-addon">微信</span>
+                                                                                            <input type="text" class="form-control" placeholder="13336521478">
+                                                                                        </div>
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        <div class="input-group">
+                                                                                            <span class="input-group-addon">密码</span>
+                                                                                            <input type="text" class="form-control" placeholder="123456789">
+                                                                                        </div>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        <div class="input-group" style="margin: 4px;">
+                                                                                            <span class="input-group-addon">绑定手机</span>
+                                                                                            <input type="text" class="form-control" placeholder="13336521478">
+                                                                                        </div>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </div>
+                                                                    <div class="modal-footer">
+                                                                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭
+                                                                        </button>
+                                                                        <button type="button" class="btn btn-primary">
+                                                                            提交更改
+                                                                        </button>
+                                                                    </div>
+                                                                </div><!-- /.modal-content -->
+                                                            </div><!-- /.modal -->
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <button type="button" class="btn btn-danger" style="padding: 2px 4px 2px 4px; border: 0px;">删除</button>
+                                                    </td>
+                                                    <td><a href="综合信息管理-账单查询.html" target="_blank">账单查询</a></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        
+                                        <!--分页-->
+                                        <div style="width: 100%; text-align: center;">
+                                            <ul class="pagination pagination-sm">
+                                                <li><a href="#">&laquo;</a></li>
+                                                <li><a href="#">1</a></li>
+                                                <li><a href="#">2</a></li>
+                                                <li><a href="#">3</a></li>
+                                                <li><a href="#">4</a></li>
+                                                <li><a href="#">5</a></li>
+                                                <li><a href="#">&raquo;</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

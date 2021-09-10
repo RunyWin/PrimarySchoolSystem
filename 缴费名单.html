@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+		<title>缴费名单</title>
+		<!--网页自适应屏幕-->
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+
+        <!--引入bootstrap框架-->
+        <link type="text/css" rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.css" />
+        <link type="text/css" rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css" />
+        <script src="js/Jquery-3.6.0/jquery-3.6.0.js"></script>
+        <script src="js/Jquery-3.6.0/jquery-3.6.0.min.js"></script>
+        <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    </head>
+
+    <body style="background-image: url('img/图片2.png'); background-repeat: no-repeat; background-size: 100%;">
+        <!--头部-->
+        <nav class="navbar navbar-default" role="navigation">
+			<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="index.html">xxx幼儿园缴费系统</a>
+			</div>
+			
+			<!--个人中心-->
+			<div style="float:right;margin:10px 10px 0 0;">
+                <div class="dropdown">
+                    <button type="button" class="btn dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown">
+                        管理员&nbsp;欢迎您！
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                        <li role="presentation">
+                            <a role="menuitem" tabindex="-1" href="个人中心.html">个人信息</a>
+                        </li>
+                        <li role="presentation">
+                            <a role="menuitem" tabindex="-1" href="修改密码.html">修改密码</a>
+                        </li>
+                        <li role="presentation">
+                            <a role="menuitem" tabindex="-1" href="#">注销登录</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+			</div>
+		</nav>
+
+        <!--主体-->
+        <div class="panel panel-default" style="margin: auto; width: 95%;">
+            <div class="panel-heading" style="text-align: center;">
+                <h3>缴费项目人员名单</h3>
+            </div>
+            <div class="panel-body">
+                <!--创建查询表单-->
+                <div style="width: 100%;">
+                    <form class="bs-example bs-example-form" role="form">
+                        <!--查询表单-->
+                        <table style="float: right; width: 70%;">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="input-group" style="margin-right: 20px;">
+                                            <span class="input-group-addon">项目编号</span>
+                                            <input type="text" class="form-control" placeholder="请输入项目编号">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="input-group" style="margin-right: 20px;">
+                                            <span class="input-group-addon">项目名称</span>
+                                            <input type="text" class="form-control" placeholder="请输入项目名称">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="input-group" style="margin-right: 20px;">
+                                            <span class="input-group-addon">姓名</span>
+                                            <input type="text" class="form-control" placeholder="请输入姓名">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="input-group" style="margin-right: 20px;">
+                                            <span class="input-group-addon">工号</span>
+                                            <input type="text" class="form-control" placeholder="请输入缴费人员工号">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <button style="margin-right: 20px;" type="button" class="btn btn-default">查询</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </form>    
+                </div>
+            </div>
+            <br>
+            <!--数据面板-->
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>序号</th>
+                                <th>项目编号</th>
+                                <th>项目名称</th>
+                                <th>姓名</th>
+                                <th>工号</th>
+                                <th>部门</th>
+                                <th>缴费时间</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>001</td>
+                                <td>10001</td>
+                                <td>2020-2021学年&nbsp;学费</td>
+                                <td>张三</td>
+                                <td>253102530</td>
+                                <td>暂无</td>
+                                <td>2021-02-11-11:59</td>
+                            </tr>
+                            <tr>
+                                <td>001</td>
+                                <td>10001</td>
+                                <td>2020-2021学年&nbsp;学费</td>
+                                <td>张三</td>
+                                <td>253102530</td>
+                                <td>暂无</td>
+                                <td>2021-02-11-11:59</td>
+                            </tr>
+                            <tr>
+                                <td>001</td>
+                                <td>10001</td>
+                                <td>2020-2021学年&nbsp;学费</td>
+                                <td>张三</td>
+                                <td>253102530</td>
+                                <td>暂无</td>
+                                <td>2021-02-11-11:59</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,471 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+		<title>缴费项目维护</title>
+		<!--网页自适应屏幕-->
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+
+        <!--引入bootstrap框架-->
+        <link type="text/css" rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.css" />
+        <link type="text/css" rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css" />
+        <script src="js/Jquery-3.6.0/jquery-3.6.0.js"></script>
+        <script src="js/Jquery-3.6.0/jquery-3.6.0.min.js"></script>
+        <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    </head>
+
+    <body style="background-image: url('img/图片2.png'); background-repeat: no-repeat; background-size: 100%;">
+        <!--头部-->
+		
+		<nav class="navbar navbar-default" role="navigation">
+			<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="index.html">xxx幼儿园缴费系统</a>
+			</div>
+			
+			<!--个人中心-->
+			<div style="float:right;margin:10px 10px 0 0;">
+                <div class="dropdown">
+                    <button type="button" class="btn dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown">
+                        管理员&nbsp;欢迎您！
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                        <li role="presentation">
+                            <a role="menuitem" tabindex="-1" href="个人中心.html">个人信息</a>
+                        </li>
+                        <li role="presentation">
+                            <a role="menuitem" tabindex="-1" href="修改密码.html">修改密码</a>
+                        </li>
+                        <li role="presentation">
+                            <a role="menuitem" tabindex="-1" href="#">注销登录</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+			</div>
+		</nav>
+
+        <!--主体-->
+        <div class="panel panel-default" style="width: 100%; margin: auto;">
+            <!--表格-->
+            <div style="width: 97%; margin: 15px 20px 5px 20px;">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>项目编号</th>
+                            <th>项目名称</th>
+                            <th>发布时间</th>
+                            <th>收费机构</th>
+                            <th>缴费金额</th>
+                            <th>缴费人数</th>
+                            <th>缴费状态</th>
+                            <th colspan="2">操作</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>10001</td>
+                            <td><input type="text" value="2020-2021学年 学费" class="form-control"/></td>
+                            <td><input type="text" value="2021-02-11-11:05" class="form-control"/></td>
+                            <td><input type="text" value="2云南工商学院" class="form-control"/></td>
+                            <td><select class="form-control"><option>单选</option><option>多选</option></select></td>
+                            <td>501</td>
+                            <td><span class="label label-success">已完成</span></td>
+                            <td>
+                                <button type="button" class="btn btn-success" style="padding: 2px 4px 2px 4px; border: 0px;"><a href="缴费项目维护-管理项目.html" style="text-decoration: none; color: white;">修改</a></button>
+                                <!--触发选项配置的按钮-->
+                                <button type="button" class="btn btn-primary"  data-toggle="modal" data-target="#myModal" style="padding: 2px 4px 2px 4px; border: 0px;">
+                                    选项
+                                </button>
+
+                                <!--模态框-->
+                                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                                    &times;
+                                                </button>
+                                                <h4 class="modal-title" id="myModalLabel">
+                                                    项目配置选项
+                                                </h4>
+                                            </div>
+                                            <div class="modal-body">
+                                                <!--添加一个面板放选项配置-->
+                                                <div class="panel panel-default">
+                                                    <div class="panel-heading">
+                                                        <ul style="line-height: 30px;">
+                                                            <li><b>收费机构:&nbsp;&nbsp;</b>云南工商学院</li>
+                                                            <li><b>收费项目:&nbsp;&nbsp;</b>2020-2021学年&nbsp;学费</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="panel-body">
+                                                        <label for="name">缴费项目选项选择:</label>
+                                                        <div class="checkbox">
+                                                            <label><input type="checkbox" value="">选项 1</label>
+                                                            <li><b>收费金额:&nbsp;&nbsp;</b>
+                                                                <a style="text-decoration: none;">￥13900.00</a>
+                                                            </li>
+                                                        </div>
+                                                        <div class="checkbox">
+                                                            <label><input type="checkbox" value="">选项 2</label>
+                                                            <li><b>收费金额:&nbsp;&nbsp;</b>
+                                                                <a style="text-decoration: none;">￥13900.00</a>
+                                                            </li>
+                                                        </div>
+                                                        <div class="checkbox">
+                                                            <label><input type="checkbox" value="">选项 2</label>
+                                                            <li><b>收费金额:&nbsp;&nbsp;</b>
+                                                                <a style="text-decoration: none;">￥13900.00</a>
+                                                            </li>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-default" data-dismiss="modal">关闭
+                                                </button>
+                                                <button type="button" class="btn btn-primary">
+                                                    提交更改
+                                                </button>
+                                            </div>
+                                        </div><!-- /.modal-content -->
+                                    </div><!-- /.modal -->
+                                </div>
+                            </td>
+                            <td>
+                                <a href="缴费名单.html" target="_blank" style="text-decoration: none;">缴费名单</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>10001</td>
+                            <td>2020-2021学年&nbsp;学费</td>
+                            <td>2021-02-11-11:05</td>
+                            <td>云南工商学院</td>
+                            <td>￥124.12</td>
+                            <td>501</td>
+                            <td><span class="label label-success">已完成</span></td>
+                            <td>
+                                <button type="button" class="btn btn-success" style="padding: 2px 4px 2px 4px; border: 0px;"><a href="缴费项目维护-管理项目.html" style="text-decoration: none; color: white;">修改</a></button>
+                                <!--触发选项配置的按钮-->
+                                <button type="button" class="btn btn-primary"  data-toggle="modal" data-target="#myModal" style="padding: 2px 4px 2px 4px; border: 0px;">
+                                    选项
+                                </button>
+
+                                <!--模态框-->
+                                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                                    &times;
+                                                </button>
+                                                <h4 class="modal-title" id="myModalLabel">
+                                                    项目配置选项
+                                                </h4>
+                                            </div>
+                                            <div class="modal-body">
+                                                <!--添加一个面板放选项配置-->
+                                                <div class="panel panel-default">
+                                                    <div class="panel-heading">
+                                                        <ul style="line-height: 30px;">
+                                                            <li><b>收费机构:&nbsp;&nbsp;</b>云南工商学院</li>
+                                                            <li><b>收费项目:&nbsp;&nbsp;</b>2020-2021学年&nbsp;学费</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="panel-body">
+                                                        <label for="name">缴费项目选项选择:</label>
+                                                        <div class="checkbox">
+                                                            <label><input type="checkbox" value="">选项 1</label>
+                                                            <li><b>收费金额:&nbsp;&nbsp;</b>
+                                                                <a style="text-decoration: none;">￥13900.00</a>
+                                                            </li>
+                                                        </div>
+                                                        <div class="checkbox">
+                                                            <label><input type="checkbox" value="">选项 2</label>
+                                                            <li><b>收费金额:&nbsp;&nbsp;</b>
+                                                                <a style="text-decoration: none;">￥13900.00</a>
+                                                            </li>
+                                                        </div>
+                                                        <div class="checkbox">
+                                                            <label><input type="checkbox" value="">选项 2</label>
+                                                            <li><b>收费金额:&nbsp;&nbsp;</b>
+                                                                <a style="text-decoration: none;">￥13900.00</a>
+                                                            </li>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-default" data-dismiss="modal">关闭
+                                                </button>
+                                                <button type="button" class="btn btn-primary">
+                                                    提交更改
+                                                </button>
+                                            </div>
+                                        </div><!-- /.modal-content -->
+                                    </div><!-- /.modal -->
+                                </div>
+                            </td>
+                            <td>
+                                <a href="缴费名单.html" target="_blank" style="text-decoration: none;">缴费名单</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>10001</td>
+                            <td>2020-2021学年&nbsp;学费</td>
+                            <td>2021-02-11-11:05</td>
+                            <td>云南工商学院</td>
+                            <td>￥124.12</td>
+                            <td>501</td>
+                            <td><span class="label label-success">已完成</span></td>
+                            <td>
+                                <button type="button" class="btn btn-success" style="padding: 2px 4px 2px 4px; border: 0px;"><a href="缴费项目维护-管理项目.html" target="_blank" style="text-decoration: none; color: white;">修改</a></button>
+                                <!--触发选项配置的按钮-->
+                                <button type="button" class="btn btn-primary"  data-toggle="modal" data-target="#myModal" style="padding: 2px 4px 2px 4px; border: 0px;">
+                                    选项
+                                </button>
+
+                                <!--模态框-->
+                                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                                    &times;
+                                                </button>
+                                                <h4 class="modal-title" id="myModalLabel">
+                                                    项目配置选项
+                                                </h4>
+                                            </div>
+                                            <div class="modal-body">
+                                                <!--添加一个面板放选项配置-->
+                                                <div class="panel panel-default">
+                                                    <div class="panel-heading">
+                                                        <ul style="line-height: 30px;">
+                                                            <li><b>收费机构:&nbsp;&nbsp;</b>云南工商学院</li>
+                                                            <li><b>收费项目:&nbsp;&nbsp;</b>2020-2021学年&nbsp;学费</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="panel-body">
+                                                        <label for="name">缴费项目选项选择:</label>
+                                                        <div class="checkbox">
+                                                            <label><input type="checkbox" value="">选项 1</label>
+                                                            <li><b>收费金额:&nbsp;&nbsp;</b>
+                                                                <a style="text-decoration: none;">￥13900.00</a>
+                                                            </li>
+                                                        </div>
+                                                        <div class="checkbox">
+                                                            <label><input type="checkbox" value="">选项 2</label>
+                                                            <li><b>收费金额:&nbsp;&nbsp;</b>
+                                                                <a style="text-decoration: none;">￥13900.00</a>
+                                                            </li>
+                                                        </div>
+                                                        <div class="checkbox">
+                                                            <label><input type="checkbox" value="">选项 2</label>
+                                                            <li><b>收费金额:&nbsp;&nbsp;</b>
+                                                                <a style="text-decoration: none;">￥13900.00</a>
+                                                            </li>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-default" data-dismiss="modal">关闭
+                                                </button>
+                                                <button type="button" class="btn btn-primary">
+                                                    提交更改
+                                                </button>
+                                            </div>
+                                        </div><!-- /.modal-content -->
+                                    </div><!-- /.modal -->
+                                </div>
+                            </td>
+                            <td>
+                                <a href="缴费名单.html" target="_blank" style="text-decoration: none;">缴费名单</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>10001</td>
+                            <td>2020-2021学年&nbsp;学费</td>
+                            <td>2021-02-11-11:05</td>
+                            <td>云南工商学院</td>
+                            <td>￥124.12</td>
+                            <td>501</td>
+                            <td><span class="label label-success">已完成</span></td>
+                            <td>
+                                <button type="button" class="btn btn-success" style="padding: 2px 4px 2px 4px; border: 0px;"><a href="缴费项目维护-管理项目.html" style="text-decoration: none; color: white;">修改</a></button>
+                                <!--触发选项配置的按钮-->
+                                <button type="button" class="btn btn-primary"  data-toggle="modal" data-target="#myModal" style="padding: 2px 4px 2px 4px; border: 0px;">
+                                    选项
+                                </button>
+
+                                <!--模态框-->
+                                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                                    &times;
+                                                </button>
+                                                <h4 class="modal-title" id="myModalLabel">
+                                                    项目配置选项
+                                                </h4>
+                                            </div>
+                                            <div class="modal-body">
+                                                <!--添加一个面板放选项配置-->
+                                                <div class="panel panel-default">
+                                                    <div class="panel-heading">
+                                                        <ul style="line-height: 30px;">
+                                                            <li><b>收费机构:&nbsp;&nbsp;</b>云南工商学院</li>
+                                                            <li><b>收费项目:&nbsp;&nbsp;</b>2020-2021学年&nbsp;学费</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="panel-body">
+                                                        <label for="name">缴费项目选项选择:</label>
+                                                        <div class="checkbox">
+                                                            <label><input type="checkbox" value="">选项 1</label>
+                                                            <li><b>收费金额:&nbsp;&nbsp;</b>
+                                                                <a style="text-decoration: none;">￥13900.00</a>
+                                                            </li>
+                                                        </div>
+                                                        <div class="checkbox">
+                                                            <label><input type="checkbox" value="">选项 2</label>
+                                                            <li><b>收费金额:&nbsp;&nbsp;</b>
+                                                                <a style="text-decoration: none;">￥13900.00</a>
+                                                            </li>
+                                                        </div>
+                                                        <div class="checkbox">
+                                                            <label><input type="checkbox" value="">选项 2</label>
+                                                            <li><b>收费金额:&nbsp;&nbsp;</b>
+                                                                <a style="text-decoration: none;">￥13900.00</a>
+                                                            </li>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-default" data-dismiss="modal">关闭
+                                                </button>
+                                                <button type="button" class="btn btn-primary">
+                                                    提交更改
+                                                </button>
+                                            </div>
+                                        </div><!-- /.modal-content -->
+                                    </div><!-- /.modal -->
+                                </div>
+                            </td>
+                            <td>
+                                <a href="缴费名单.html" target="_blank" style="text-decoration: none;">缴费名单</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>10001</td>
+                            <td>2020-2021学年&nbsp;学费</td>
+                            <td>2021-02-11-11:05</td>
+                            <td>云南工商学院</td>
+                            <td>￥124.12</td>
+                            <td>501</td>
+                            <td><span class="label label-success">已完成</span></td>
+                            <td>
+                                <button type="button" class="btn btn-success" style="padding: 2px 4px 2px 4px; border: 0px;"><a href="缴费项目维护-管理项目.html" style="text-decoration: none; color: white;">修改</a></button>
+                                <!--触发选项配置的按钮-->
+                                <button type="button" class="btn btn-primary"  data-toggle="modal" data-target="#myModal" style="padding: 2px 4px 2px 4px; border: 0px;">
+                                    选项
+                                </button>
+
+                                <!--模态框-->
+                                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                                    &times;
+                                                </button>
+                                                <h4 class="modal-title" id="myModalLabel">
+                                                    项目配置选项
+                                                </h4>
+                                            </div>
+                                            <div class="modal-body">
+                                                <!--添加一个面板放选项配置-->
+                                                <div class="panel panel-default">
+                                                    <div class="panel-heading">
+                                                        <ul style="line-height: 30px;">
+                                                            <li><b>收费机构:&nbsp;&nbsp;</b>云南工商学院</li>
+                                                            <li><b>收费项目:&nbsp;&nbsp;</b>2020-2021学年&nbsp;学费</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="panel-body">
+                                                        <label for="name">缴费项目选项选择:</label>
+                                                        <div class="checkbox">
+                                                            <label><input type="checkbox" value="">选项 1</label>
+                                                            <li><b>收费金额:&nbsp;&nbsp;</b>
+                                                                <a style="text-decoration: none;">￥13900.00</a>
+                                                            </li>
+                                                        </div>
+                                                        <div class="checkbox">
+                                                            <label><input type="checkbox" value="">选项 2</label>
+                                                            <li><b>收费金额:&nbsp;&nbsp;</b>
+                                                                <a style="text-decoration: none;">￥13900.00</a>
+                                                            </li>
+                                                        </div>
+                                                        <div class="checkbox">
+                                                            <label><input type="checkbox" value="">选项 2</label>
+                                                            <li><b>收费金额:&nbsp;&nbsp;</b>
+                                                                <a style="text-decoration: none;">￥13900.00</a>
+                                                            </li>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-default" data-dismiss="modal">关闭
+                                                </button>
+                                                <button type="button" class="btn btn-primary">
+                                                    提交更改
+                                                </button>
+                                            </div>
+                                        </div><!-- /.modal-content -->
+                                    </div><!-- /.modal -->
+                                </div>
+                            </td>
+                            <td>
+                                <a href="缴费名单.html" target="_blank" style="text-decoration: none;">缴费名单</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>
+                                <!--新增项目，按钮用于模态框弹出-->
+                                <button type="button" class="btn btn-primary" style="padding: 4px 12px 4px 12px; border: 0px; margin-left: 10px;">
+                                    <a href="缴费项目维护-创建项目.html" target="_blank" style="text-decoration: none; color: white;">新增</a>
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!--分页-->
+                <div style="width: 100%; text-align: center;">
+                    <ul class="pagination pagination-sm">
+                        <li><a href="#">&laquo;</a></li>
+                        <li><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li><a href="#">&raquo;</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

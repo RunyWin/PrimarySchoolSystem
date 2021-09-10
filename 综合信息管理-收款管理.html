@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+		<title>收款管理</title>
+		<!--网页自适应屏幕-->
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+
+        <!--引入bootstrap框架-->
+        <link type="text/css" rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.css" />
+        <link type="text/css" rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css" />
+        <script src="js/Jquery-3.6.0/jquery-3.6.0.js"></script>
+        <script src="js/Jquery-3.6.0/jquery-3.6.0.min.js"></script>
+        <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+
+    </head>
+    
+    <body style="background-image: url('img/图片2.png'); background-repeat: no-repeat; background-size: 100%;">
+         <!--头部-->
+        <nav class="navbar navbar-default" role="navigation">
+			<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="index.html">xxx幼儿园缴费系统</a>
+			</div>
+			
+			<!--个人中心-->
+			<div style="float:right;margin:10px 10px 0 0;">
+                <div class="dropdown">
+                    <button type="button" class="btn dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown">
+                        管理员&nbsp;欢迎您！
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                        <li role="presentation">
+                            <a role="menuitem" tabindex="-1" href="个人中心.html">个人信息</a>
+                        </li>
+                        <li role="presentation">
+                            <a role="menuitem" tabindex="-1" href="修改密码.html">修改密码</a>
+                        </li>
+                        <li role="presentation">
+                            <a role="menuitem" tabindex="-1" href="#">注销登录</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+			</div>
+		</nav>
+
+        <!--主体-->
+        <div class="panel panel-default" style="width: 95%; margin: auto;">
+            <div class="panel-body">
+                   <!--垂直的导航栏-->
+                   <div style="width: 10%; float: left;">
+                    <ul class="nav nav-pills nav-stacked">
+                        <li><a href="综合信息管理.html">用户管理</a></li>
+                        <li class="active"><a href="综合信息管理-收款管理.html">收款管理</a></li>
+                        <li><a href="综合信息管理-系统-管理员.html">系统管理</a></li>
+                    </ul>
+                </div>
+
+                <!--内容面板-->
+                <div class="panel panel-default" style="width: 88%; float: left; margin-left: 15px;">
+                    <div class="panel-body">
+                        <!--标签页-->
+                        <ul id="myTab" class="nav nav-tabs">
+                            <li class="active">
+                                <a href="#bill" data-toggle="tab">收款账户管理</a>
+                            </li>
+                            <li>
+                                <a href="#ios" data-toggle="tab">账本</a>
+                            </li>
+                        </ul>
+                        
+                        <!--收款账户管理盒子-->
+                        <div id="myTabContent" class="tab-content">
+                            <div class="tab-pane fade in active" id="bill">
+                                <!--账户表格-->
+                                <div class="panel panel-default" style="margin-top: 20px;">
+                                    <div class="panel-body">
+                                        <table class="table table-hover">
+                                            <thead>
+                                                <tr>
+                                                    <th>收款方</th>
+                                                    <th>收款账户</th>
+                                                    <th>收款二维码</th>
+                                                    <th colspan="2">操作</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <textarea class="form-control" rows="2" placeholder="云南工商学院"></textarea>
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" class="form-control" style="margin-top: 8px;" placeholder="611626453001">
+                                                    </td>
+                                                    <td>
+                                                        <input type="file" id="inputfile" style="margin-top: 12px;">
+                                                    </td>
+                                                    <td>
+                                                        <button type="button" class="btn btn-success" style="margin-top: 12px; padding: 2px 4px 2px 4px;">修改</button>
+                                                    </td>
+                                                    <td>
+                                                        <button type="button" class="btn btn-danger" style="margin-top: 12px; padding: 2px 4px 2px 4px;">删除</button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <textarea class="form-control" rows="2" placeholder="中国南方电网公司"></textarea>
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" class="form-control" style="margin-top: 8px;" placeholder="611626453001">
+                                                    </td>
+                                                    <td>
+                                                        <input type="file" id="inputfile" style="margin-top: 12px;">
+                                                    </td>
+                                                    <td>
+                                                        <button type="button" class="btn btn-success" style="margin-top: 12px; padding: 2px 4px 2px 4px;">修改</button>
+                                                    </td>
+                                                    <td>
+                                                        <button type="button" class="btn btn-danger" style="margin-top: 12px; padding: 2px 4px 2px 4px;">删除</button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td>
+                                                        <button type="button" class="btn btn-warning" style="margin-top: 12px; padding: 2px 4px 2px 4px;">添加</button>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
+                                        <!--分页-->
+                                        <div style="width: 100%;text-align: center;">
+                                            <ul class="pagination pagination-sm">
+                                                <li><a href="#">&laquo;</a></li>
+                                                <li><a href="#">1</a></li>
+                                                <li><a href="#">2</a></li>
+                                                <li><a href="#">3</a></li>
+                                                <li><a href="#">4</a></li>
+                                                <li><a href="#">5</a></li>
+                                                <li><a href="#">&raquo;</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!--账本-->
+                            <div class="tab-pane fade" id="ios">
+                                <div class="panel panel-default" style="margin-top: 20px; margin: auto;">
+                                    <div class="panel-body">
+                                        
+                                        <div style="width: 100%; margin: 25px 0px 50px 0px; text-align: center;">
+                                            
+                                            <!--数据面板-->
+                                            <div class="panel panel-success" style=" width: 25%; float: left; margin: 25px 48px 50px 48px;">
+                                                <div class="panel-heading">
+                                                    <h3 class="panel-title">今日收款</h3>
+                                                </div>
+                                                <div class="panel-body">
+                                                    <div style="margin: auto;">
+                                                        <span style="font-size: 35px;"><b>15</b></span>&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size: 20px;"><b>笔</b></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <!--数据面板-->
+                                            <div class="panel panel-success" style=" width: 25%; float: left; margin: 25px 48px 50px 48px;">
+                                                <div class="panel-heading">
+                                                    <h3 class="panel-title">今日收款</h3>
+                                                </div>
+                                                <div class="panel-body">
+                                                    <div style="margin: auto;">
+                                                        <span style="font-size: 35px;"><b>￥13900.00</b></span>&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size: 20px;"><b>元</b></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <!--数据面板-->
+                                            <div class="panel panel-success" style=" width: 25%; float: left;margin: 25px 48px 50px 48px;">
+                                                <div class="panel-heading">
+                                                    <h3 class="panel-title">累计收款</h3>
+                                                </div>
+                                                <div class="panel-body">
+                                                    <div style="margin: auto;">
+                                                        <span style="font-size: 35px;"><b>￥13000900.00</b></span>&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size: 20px;"><b>元</b></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div style="float: right;"><a href="缴费大厅-缴费账单.html">消费账单</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

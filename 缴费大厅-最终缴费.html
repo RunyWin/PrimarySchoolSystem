@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+		<title>支付</title>
+        <!--网页自适应屏幕-->
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+        
+        <!--引入bootstrap框架-->
+        <link type="text/css" rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.css" />
+        <link type="text/css" rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css" />
+        <script src="js/Jquery-3.6.0/jquery-3.6.0.js"></script>
+        <script src="js/Jquery-3.6.0/jquery-3.6.0.min.js"></script>
+        <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    </head>
+
+    <body style="background-image: url('img/图片2.png'); background-repeat: no-repeat; background-size: 100%;">
+        <!--头部-->
+        <nav class="navbar navbar-default" role="navigation">
+			<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="index.html">xxx幼儿园缴费系统</a>
+			</div>
+			
+			<!--个人中心-->
+			<div style="float:right;margin:10px 10px 0 0;">
+                <div class="dropdown">
+                    <button type="button" class="btn dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown">
+                        管理员&nbsp;欢迎您！
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                        <li role="presentation">
+                            <a role="menuitem" tabindex="-1" href="个人中心.html">个人信息</a>
+                        </li>
+                        <li role="presentation">
+                            <a role="menuitem" tabindex="-1" href="修改密码.html">修改密码</a>
+                        </li>
+                        <li role="presentation">
+                            <a role="menuitem" tabindex="-1" href="#">注销登录</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+			</div>
+		</nav>
+
+        <!--主体-->
+        <div class="panel panel-default" style="width: 65%; margin: auto;">
+            <!--面包屑导航-->
+            <div class="panel-heading" style="height: 50px;">
+                <div style="width: 100%;">
+                    <ul class="breadcrumb">
+                        <li><a href="缴费大厅.html">缴费大厅</a></li>
+                        <li><a href="缴费大厅-进入缴费.html">项目缴费</a></li>
+                        <li class="active">最终缴费</li>
+                    </ul> 
+                </div>
+            </div>
+
+            <!--支付方式-->
+            <div class="panel-body">
+                <div style="width: 100%;">
+                    <ul id="myTab" class="nav nav-tabs">
+                        <li class="active">
+                            <a href="#cash" data-toggle="tab">
+                                 现金结算
+                            </a>
+                        </li>
+                        <li><a href="#Sweep" data-toggle="tab">扫码枪支付</a></li>
+                        <li><a href="#code" data-toggle="tab">二维码支付</a></li>
+                    </ul>
+                    <!--隐藏框-->
+                    <!--现金结算 -->
+                    <div id="myTabContent" class="tab-content">
+                        <div class="tab-pane fade in active" id="cash">
+                            <div style="margin: auto; margin-top: 40px; text-align: center;">
+                               <h4 style="color: rgb(0, 0, 0);">应收现金:&nbsp;&nbsp;<span style="color: coral;">￥13900.00</span></h4> 
+                            </div>
+                            <div style="width: 100%;">
+                                <table style="float: right;">
+                                    <tr>
+                                        <td>
+                                            <button type="button" class="btn btn-success" style="margin-bottom: 20px; border: 0px;">现金已结清</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="缴费大厅-缴费账单.html">查看账单</a></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        
+                        <!--扫码枪结算-->
+                        <div class="tab-pane fade" id="Sweep">
+                            <div style="margin: auto; margin-top: 40px; text-align: center;">
+                                <h4 style="color: rgb(0, 0, 0);">应收金额:&nbsp;&nbsp;<span style="color: coral;">￥13900.00</span></h4> 
+                             </div>
+                             <div style="margin: auto; text-align: center; margin-top: 50px;">
+                                <button type="button" class="btn btn-warning" style="padding: 10px 40px 10px 40px; border: 0px;">确认金额，提枪扫码</button>
+                            </div>
+                            <table style="float: right;">
+                                <tbody>
+                                    <tr>
+                                        <td><a href="缴费大厅-缴费账单.html">查看账单</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!--二维码收款-->
+                        <div class="tab-pane fade" id="code">
+                            <div style="margin: auto; margin-top: 40px; text-align: center;">
+                                <h4 style="color: rgb(0, 0, 0);">应收金额:&nbsp;&nbsp;<span style="color: coral;">￥13900.00</span></h4> 
+                             </div>
+                             <!--面板-->
+                             <div class="panel panel-primary" style="width: 40%; margin: auto; text-align: center; margin-top: 20px;">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">支持微信/支付宝扫码</h3>
+                                </div>
+                                <div class="panel-body">
+                                    <img src="img/二维码.png" width="100%">
+                                </div>
+                            </div>
+                            <table style="float: right;">
+                                <tbody>
+                                    <tr>
+                                        <td><a href="缴费大厅-缴费账单.html">查看账单</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
